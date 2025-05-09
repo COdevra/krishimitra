@@ -8,8 +8,6 @@ import ProblemsSection from '@/components/ProblemsSection';
 import SolutionSection from '@/components/SolutionSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import SDGsSection from '@/components/SDGsSection';
-import ExecutionStrategySection from '@/components/ExecutionStrategySection';
-import InvestmentSection from '@/components/InvestmentSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -38,8 +36,6 @@ const Home: React.FC = () => {
           <SolutionSection />
           <FeaturesSection />
           <SDGsSection />
-          <ExecutionStrategySection />
-          <InvestmentSection />
           <ContactSection />
         </main>
         <Footer />

@@ -1,12 +1,7 @@
 export const NAVBAR_LINKS = [
   { title: "Home", href: "#home" },
-  { title: "About", href: "#about" },
   { title: "Team", href: "#team" },
-  { title: "Problems", href: "#problems" },
-  { title: "Solution", href: "#features" },
-  { title: "SDGs", href: "#sdgs" },
-  { title: "Strategy", href: "#strategy" },
-  { title: "Investment", href: "#investment" },
+  { title: "Impact", href: "#sdgs" },
   { title: "Contact", href: "#contact" },
 ];
 
@@ -184,28 +179,20 @@ export const SOCIAL_LINKS = [
 
 export const FOOTER_LINKS = [
   {
-    title: "About Us",
+    title: "Navigation",
     links: [
       { label: "Home", href: "#home" },
-      { label: "About", href: "#about" },
       { label: "Team", href: "#team" },
+      { label: "Impact", href: "#sdgs" },
       { label: "Contact", href: "#contact" },
     ],
   },
   {
-    title: "Our Solution",
+    title: "Features",
     links: [
       { label: "Problems", href: "#problems" },
-      { label: "Features", href: "#features" },
-      { label: "SDGs", href: "#sdgs" },
-    ],
-  },
-  {
-    title: "Business",
-    links: [
-      { label: "Strategy", href: "#strategy" },
-      { label: "Investment", href: "#investment" },
-      { label: "Partners", href: "#strategy" },
+      { label: "Solution", href: "#features" },
+      { label: "Technologies", href: "#features" },
     ],
   },
 ];

@@ -20,12 +20,12 @@ const SocialIcon: React.FC<{ icon: string }> = ({ icon }) => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-neutral-900 text-white py-12">
+    <footer className="bg-[#196F3D] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex-1 min-w-0">
             <Logo textClass="text-white font-bold" />
-            <p className="mt-4 text-neutral-300 max-w-xl">
+            <p className="mt-4 text-white opacity-90 max-w-xl">
               Empowering small holder farmers through technology to improve agricultural productivity, income, and sustainability.
             </p>
           </div>
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                   <ul className="mt-4 space-y-4">
                     {section.links.map((link) => (
                       <li key={link.label}>
-                        <a href={link.href} className="text-neutral-300 hover:text-white">
+                        <a href={link.href} className="text-white text-opacity-80 hover:text-white hover:underline transition-all duration-300">
                           {link.label}
                         </a>
                       </li>
@@ -50,16 +50,20 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-8 border-t border-neutral-700 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-[#82E0AA] pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {SOCIAL_LINKS.map((social) => (
-              <a key={social.platform} href={social.url} className="text-neutral-400 hover:text-white">
+              <a 
+                key={social.platform} 
+                href={social.url} 
+                className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300"
+              >
                 <span className="sr-only">{social.platform}</span>
                 <SocialIcon icon={social.icon} />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-neutral-400 md:mt-0 md:order-1">
+          <p className="mt-8 text-base text-white text-opacity-80 md:mt-0 md:order-1">
             &copy; {new Date().getFullYear()} KrishiMitra. All rights reserved.
           </p>
         </div>

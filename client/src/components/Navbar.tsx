@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -9,12 +9,54 @@ import { useMobile } from "@/hooks/use-mobile";
 const Navbar: React.FC = () => {
   const isMobile = useMobile();
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
-  const handleLinkClick = () => {
-    if (isOpen) {
-      setIsOpen(false);
+  // Function to scroll to section smoothly
+  const scrollToSection = (href: string) => {
+    const targetId = href.substring(1); // Remove the '#' character
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(href);
+      if (isOpen) {
+        setIsOpen(false);
+      }
     }
   };
+
+  // Monitor scroll position to highlight active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      
+      // Find all section elements
+      const sections = NAVBAR_LINKS.map(link => {
+        const id = link.href.substring(1);
+        const element = document.getElementById(id);
+        return { id: link.href, element, position: element?.offsetTop || 0 };
+      });
+      
+      // Sort by position
+      const sortedSections = sections
+        .filter(section => section.element)
+        .sort((a, b) => a.position - b.position);
+      
+      // Find the current active section
+      for (let i = sortedSections.length - 1; i >= 0; i--) {
+        const section = sortedSections[i];
+        if (scrollPosition >= (section.position - 150)) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -25,20 +67,28 @@ const Navbar: React.FC = () => {
           </div>
 
           {!isMobile ? (
-            <div className="hidden md:flex md:items-center md:space-x-4">
+            <div className="hidden md:flex md:items-center md:space-x-6">
               {NAVBAR_LINKS.map((link, index) => (
                 index === NAVBAR_LINKS.length - 1 ? (
-                  <Button key={link.title} asChild variant="default">
-                    <a href={link.href}>{link.title}</a>
-                  </Button>
-                ) : (
-                  <a 
-                    key={link.title}
-                    href={link.href}
-                    className="text-neutral-800 hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
+                  <Button 
+                    key={link.title} 
+                    className="bg-[#196F3D] hover:bg-[#196F3D]/90"
+                    onClick={() => scrollToSection(link.href)}
                   >
                     {link.title}
-                  </a>
+                  </Button>
+                ) : (
+                  <button 
+                    key={link.title}
+                    onClick={() => scrollToSection(link.href)}
+                    className={`px-3 py-2 rounded-md text-sm font-medium ${
+                      activeSection === link.href
+                        ? "text-[#196F3D] font-semibold"
+                        : "text-neutral-800 hover:text-[#196F3D]"
+                    }`}
+                  >
+                    {link.title}
+                  </button>
                 )
               ))}
             </div>
@@ -52,14 +102,17 @@ const Navbar: React.FC = () => {
               <SheetContent className="w-64 sm:w-80">
                 <div className="mt-6 flex flex-col space-y-3">
                   {NAVBAR_LINKS.map((link) => (
-                    <a
+                    <button
                       key={link.title}
-                      href={link.href}
-                      className="px-3 py-2 text-base font-medium rounded-md hover:bg-neutral-100 transition-colors"
-                      onClick={handleLinkClick}
+                      onClick={() => scrollToSection(link.href)}
+                      className={`px-3 py-2 text-base font-medium rounded-md transition-colors ${
+                        activeSection === link.href
+                          ? "bg-[#196F3D]/10 text-[#196F3D] font-semibold"
+                          : "hover:bg-neutral-100 text-neutral-800 hover:text-[#196F3D]"
+                      }`}
                     >
                       {link.title}
-                    </a>
+                    </button>
                   ))}
                 </div>
               </SheetContent>
