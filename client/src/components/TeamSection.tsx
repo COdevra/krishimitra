@@ -60,19 +60,7 @@ const TeamSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="inline-block p-1 bg-[#196F3D]/10 rounded-xl">
-            <img
-              src="https://pixabay.com/get/g60d39df2e55213b1626ea0e04a0caeafa4dc21cdce764723b9ca8b59a7d8ad3c6b38c0dcf84c7e1fa8aa07d1c74a7d98.jpg"
-              alt="Farmers working in rice field"
-              className="mx-auto rounded-lg max-w-full h-auto"
-              style={{ maxHeight: "300px" }}
-            />
-          </div>
-          <p className="mt-6 text-lg text-neutral-700">
-            Our team is committed to empowering smallholder farmers through innovative digital solutions
-          </p>
-        </div>
+
       </div>
     </section>
   );

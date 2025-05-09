@@ -5,7 +5,6 @@ export const NAVBAR_LINKS = [
   { title: "Problems", href: "#problems" },
   { title: "Solution", href: "#features" },
   { title: "SDGs", href: "#sdgs" },
-  { title: "Geography", href: "#geography" },
   { title: "Strategy", href: "#strategy" },
   { title: "Investment", href: "#investment" },
   { title: "Contact", href: "#contact" },
@@ -199,24 +198,14 @@ export const FOOTER_LINKS = [
       { label: "Problems", href: "#problems" },
       { label: "Features", href: "#features" },
       { label: "SDGs", href: "#sdgs" },
-      { label: "Geography", href: "#geography" },
     ],
   },
   {
     title: "Business",
     links: [
       { label: "Strategy", href: "#strategy" },
-      { label: "Market", href: "#market-strategy" },
       { label: "Investment", href: "#investment" },
       { label: "Partners", href: "#strategy" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Policy", href: "#" },
     ],
   },
 ];

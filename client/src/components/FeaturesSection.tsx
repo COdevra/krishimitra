@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Cpu, 
@@ -7,9 +7,8 @@ import {
   TrendingUp, 
   CloudSun, 
   GraduationCap,
+  ChevronRight
 } from "lucide-react";
-import Logo from "./Logo";
-import featuresBgImage from "../assets/Puja Khatri-3_page-0007.jpg";
 
 interface Feature {
   title: string;
@@ -18,6 +17,8 @@ interface Feature {
 }
 
 const FeaturesSection: React.FC = () => {
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
+  
   const features: Feature[] = [
     {
       title: "AI-powered digital platform",
@@ -40,7 +41,7 @@ const FeaturesSection: React.FC = () => {
       icon: <TrendingUp className="h-6 w-6 text-white" />,
     },
     {
-      title: "Real time weather updates",
+      title: "Real-time weather updates",
       description: "Access accurate, localized weather forecasts and alerts to help you plan farming activities and protect your crops from adverse conditions.",
       icon: <CloudSun className="h-6 w-6 text-white" />,
     },
@@ -59,26 +60,39 @@ const FeaturesSection: React.FC = () => {
       ></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex items-center justify-center mb-10">
-          <Logo size={50} textClass="text-white font-bold" />
-          <h2 className="text-3xl font-bold text-white ml-4">Key Features</h2>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white">Key Features</h2>
+          <p className="mt-4 text-xl text-white/80 max-w-3xl mx-auto">
+            Empowering farmers with digital tools for better decision-making and improved productivity
+          </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
-            <Card key={feature.title} className="bg-white bg-opacity-95 backdrop-filter backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border-l-4 border-[#82E0AA] hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 bg-[#196F3D] rounded-md p-3">
-                    {feature.icon}
+          {features.map((feature, index) => (
+            <div 
+              key={feature.title} 
+              className="transform transition-all duration-500 hover:-translate-y-2"
+              onMouseEnter={() => setHoveredItem(index)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              <Card className={`h-full bg-white bg-opacity-95 backdrop-filter backdrop-blur-sm rounded-lg overflow-hidden shadow-xl ${hoveredItem === index ? 'shadow-2xl ring-2 ring-[#82E0AA]' : 'shadow-lg'} transition-all duration-300`}>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <div className="mb-4">
+                    <div className="w-12 h-12 bg-[#196F3D] rounded-full flex items-center justify-center mb-4 shadow-lg transform transition-transform duration-300 hover:rotate-12">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#196F3D]">{feature.title}</h3>
                   </div>
-                  <h3 className="ml-4 text-lg font-medium text-neutral-900">{feature.title}</h3>
-                </div>
-                <p className="mt-4 text-neutral-700">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
+                  <p className="mt-2 text-neutral-700 flex-grow">
+                    {feature.description}
+                  </p>
+                  <div className={`mt-4 text-[#196F3D] font-medium flex items-center transition-opacity duration-300 ${hoveredItem === index ? 'opacity-100' : 'opacity-0'}`}>
+                    <span>Learn more</span>
+                    <ChevronRight className="h-4 w-4 ml-1" />
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

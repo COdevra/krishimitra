@@ -4,14 +4,11 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import TeamSection from '@/components/TeamSection';
-import KrishiMitraMeaningSection from '@/components/KrishiMitraMeaningSection';
 import ProblemsSection from '@/components/ProblemsSection';
 import SolutionSection from '@/components/SolutionSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import SDGsSection from '@/components/SDGsSection';
-import GeographicalFocusSection from '@/components/GeographicalFocusSection';
 import ExecutionStrategySection from '@/components/ExecutionStrategySection';
-import MarketStrategySection from '@/components/MarketStrategySection';
 import InvestmentSection from '@/components/InvestmentSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -35,16 +32,13 @@ const Home: React.FC = () => {
         <Navbar />
         <main className="flex-grow">
           <HeroSection />
-          <KrishiMitraMeaningSection />
           <AboutSection />
           <TeamSection />
           <ProblemsSection />
           <SolutionSection />
           <FeaturesSection />
           <SDGsSection />
-          <GeographicalFocusSection />
           <ExecutionStrategySection />
-          <MarketStrategySection />
           <InvestmentSection />
           <ContactSection />
         </main>
