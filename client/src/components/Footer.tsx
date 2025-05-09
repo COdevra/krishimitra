@@ -1,0 +1,71 @@
+import React from "react";
+import Logo from "./Logo";
+import { FOOTER_LINKS, SOCIAL_LINKS } from "@/lib/constants";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+
+const SocialIcon: React.FC<{ icon: string }> = ({ icon }) => {
+  switch (icon) {
+    case "Facebook":
+      return <Facebook className="h-5 w-5" />;
+    case "Twitter":
+      return <Twitter className="h-5 w-5" />;
+    case "Instagram":
+      return <Instagram className="h-5 w-5" />;
+    case "Linkedin":
+      return <Linkedin className="h-5 w-5" />;
+    default:
+      return null;
+  }
+};
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-neutral-900 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lg:flex lg:items-center lg:justify-between">
+          <div className="flex-1 min-w-0">
+            <Logo textClass="text-white font-bold" />
+            <p className="mt-4 text-neutral-300 max-w-xl">
+              Empowering small holder farmers through technology to improve agricultural productivity, income, and sustainability.
+            </p>
+          </div>
+          
+          <div className="mt-8 lg:mt-0">
+            <nav className="flex flex-wrap">
+              {FOOTER_LINKS.map((section) => (
+                <div key={section.title} className="w-full md:w-1/2 lg:w-1/3 mb-6">
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{section.title}</h3>
+                  <ul className="mt-4 space-y-4">
+                    {section.links.map((link) => (
+                      <li key={link.label}>
+                        <a href={link.href} className="text-neutral-300 hover:text-white">
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </nav>
+          </div>
+        </div>
+        
+        <div className="mt-8 border-t border-neutral-700 pt-8 md:flex md:items-center md:justify-between">
+          <div className="flex space-x-6 md:order-2">
+            {SOCIAL_LINKS.map((social) => (
+              <a key={social.platform} href={social.url} className="text-neutral-400 hover:text-white">
+                <span className="sr-only">{social.platform}</span>
+                <SocialIcon icon={social.icon} />
+              </a>
+            ))}
+          </div>
+          <p className="mt-8 text-base text-neutral-400 md:mt-0 md:order-1">
+            &copy; {new Date().getFullYear()} KrishiMitra. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
