@@ -31,9 +31,9 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="mt-8 lg:mt-0">
-            <nav className="flex flex-wrap">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               {FOOTER_LINKS.map((section) => (
-                <div key={section.title} className="w-full md:w-1/2 lg:w-1/3 mb-6">
+                <div key={section.title} className="mb-6">
                   <h3 className="text-sm font-semibold text-[#196F3D] tracking-wider uppercase">{section.title}</h3>
                   <ul className="mt-4 space-y-4">
                     {section.links.map((link) => (
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   </ul>
                 </div>
               ))}
-            </nav>
+            </div>
           </div>
         </div>
         
