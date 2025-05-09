@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
+import TeamSection from '@/components/TeamSection';
+import KrishiMitraMeaningSection from '@/components/KrishiMitraMeaningSection';
 import ProblemsSection from '@/components/ProblemsSection';
 import SolutionSection from '@/components/SolutionSection';
 import FeaturesSection from '@/components/FeaturesSection';
@@ -16,10 +18,10 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>KrishiMitra - Empowering Small Holder Farmers with Technology</title>
-        <meta name="description" content="KrishiMitra is an AI-powered digital platform providing personalized agricultural insights, market information, and weather updates to small holder farmers." />
-        <meta property="og:title" content="KrishiMitra - Empowering Small Holder Farmers" />
-        <meta property="og:description" content="An AI-powered digital platform helping small holder farmers improve productivity and income through personalized agricultural insights." />
+        <title>KrishiMitra - Empowering Smallholder Farmers with Technology</title>
+        <meta name="description" content="KrishiMitra is an AI-powered digital platform providing personalized agricultural insights, market information, and weather updates to smallholder farmers in South Asia." />
+        <meta property="og:title" content="KrishiMitra - Empowering Smallholder Farmers" />
+        <meta property="og:description" content="An AI-powered digital platform helping smallholder farmers improve productivity and income through personalized agricultural insights." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://krishimitra.com" />
         <meta property="og:image" content="https://krishimitra.com/og-image.jpg" />
@@ -31,7 +33,9 @@ const Home: React.FC = () => {
         <Navbar />
         <main className="flex-grow">
           <HeroSection />
+          <KrishiMitraMeaningSection />
           <AboutSection />
+          <TeamSection />
           <ProblemsSection />
           <SolutionSection />
           <FeaturesSection />
