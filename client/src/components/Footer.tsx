@@ -20,12 +20,12 @@ const SocialIcon: React.FC<{ icon: string }> = ({ icon }) => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#196F3D] text-white py-12">
+    <footer className="bg-white shadow-inner py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex-1 min-w-0">
-            <Logo textClass="text-white font-bold" />
-            <p className="mt-4 text-white opacity-90 max-w-xl">
+            <Logo textClass="text-[#196F3D] font-bold" />
+            <p className="mt-4 text-neutral-700 max-w-xl">
               Empowering small holder farmers through technology to improve agricultural productivity, income, and sustainability.
             </p>
           </div>
@@ -34,11 +34,11 @@ const Footer: React.FC = () => {
             <nav className="flex flex-wrap">
               {FOOTER_LINKS.map((section) => (
                 <div key={section.title} className="w-full md:w-1/2 lg:w-1/3 mb-6">
-                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase">{section.title}</h3>
+                  <h3 className="text-sm font-semibold text-[#196F3D] tracking-wider uppercase">{section.title}</h3>
                   <ul className="mt-4 space-y-4">
                     {section.links.map((link) => (
                       <li key={link.label}>
-                        <a href={link.href} className="text-white text-opacity-80 hover:text-white hover:underline transition-all duration-300">
+                        <a href={link.href} className="text-neutral-600 hover:text-[#196F3D] hover:underline transition-all duration-300">
                           {link.label}
                         </a>
                       </li>
@@ -50,20 +50,20 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-8 border-t border-[#82E0AA] pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-neutral-200 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {SOCIAL_LINKS.map((social) => (
               <a 
                 key={social.platform} 
                 href={social.url} 
-                className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300"
+                className="text-neutral-500 hover:text-[#196F3D] hover:bg-[#196F3D]/5 p-2 rounded-full transition-colors duration-300"
               >
                 <span className="sr-only">{social.platform}</span>
                 <SocialIcon icon={social.icon} />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-white text-opacity-80 md:mt-0 md:order-1">
+          <p className="mt-8 text-base text-neutral-600 md:mt-0 md:order-1">
             &copy; {new Date().getFullYear()} KrishiMitra. All rights reserved.
           </p>
         </div>
