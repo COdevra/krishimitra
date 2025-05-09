@@ -1,11 +1,13 @@
 export const NAVBAR_LINKS = [
   { title: "Home", href: "#home" },
   { title: "About", href: "#about" },
-  { title: "Features", href: "#features" },
-  { title: "Problems & Solutions", href: "#problems" },
+  { title: "Team", href: "#team" },
+  { title: "Problems", href: "#problems" },
+  { title: "Solution", href: "#features" },
   { title: "SDGs", href: "#sdgs" },
   { title: "Geography", href: "#geography" },
   { title: "Strategy", href: "#strategy" },
+  { title: "Investment", href: "#investment" },
   { title: "Contact", href: "#contact" },
 ];
 
@@ -183,21 +185,30 @@ export const SOCIAL_LINKS = [
 
 export const FOOTER_LINKS = [
   {
-    title: "Navigation",
+    title: "About Us",
     links: [
       { label: "Home", href: "#home" },
       { label: "About", href: "#about" },
-      { label: "Features", href: "#features" },
-      { label: "Problems & Solutions", href: "#problems" },
+      { label: "Team", href: "#team" },
+      { label: "Contact", href: "#contact" },
     ],
   },
   {
-    title: "More Info",
+    title: "Our Solution",
     links: [
+      { label: "Problems", href: "#problems" },
+      { label: "Features", href: "#features" },
       { label: "SDGs", href: "#sdgs" },
       { label: "Geography", href: "#geography" },
+    ],
+  },
+  {
+    title: "Business",
+    links: [
       { label: "Strategy", href: "#strategy" },
-      { label: "Contact", href: "#contact" },
+      { label: "Market", href: "#market-strategy" },
+      { label: "Investment", href: "#investment" },
+      { label: "Partners", href: "#strategy" },
     ],
   },
   {

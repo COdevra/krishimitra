@@ -11,6 +11,8 @@ import FeaturesSection from '@/components/FeaturesSection';
 import SDGsSection from '@/components/SDGsSection';
 import GeographicalFocusSection from '@/components/GeographicalFocusSection';
 import ExecutionStrategySection from '@/components/ExecutionStrategySection';
+import MarketStrategySection from '@/components/MarketStrategySection';
+import InvestmentSection from '@/components/InvestmentSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -42,6 +44,8 @@ const Home: React.FC = () => {
           <SDGsSection />
           <GeographicalFocusSection />
           <ExecutionStrategySection />
+          <MarketStrategySection />
+          <InvestmentSection />
           <ContactSection />
         </main>
         <Footer />
