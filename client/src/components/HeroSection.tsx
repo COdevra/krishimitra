@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import heroImage1 from "../assets/slide.jpg";
@@ -11,6 +11,16 @@ const HeroSection: React.FC = () => {
 
   const nextImage = () => setCurrent((prev) => (prev + 1) % heroImages.length);
   const prevImage = () => setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+
+  // Auto slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 3000); // Change slide every 3 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array means this effect runs once on mount
 
   return (
     <section id="home" className="relative h-[90vh] min-h-[500px] flex items-center overflow-hidden">
