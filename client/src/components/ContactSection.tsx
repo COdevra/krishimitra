@@ -66,6 +66,10 @@ const ContactSection: React.FC = () => {
     }, 1000);
   };
 
+  const handleSocialClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+  };
+
   return (
     <section id="contact" className="py-16 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,9 +181,8 @@ const ContactSection: React.FC = () => {
                       {SOCIAL_LINKS.map((social) => (
                         <a 
                           key={social.platform} 
-                          href={social.url} 
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="#" 
+                          onClick={handleSocialClick}
                           className="text-neutral-700 hover:text-primary transition-colors"
                           aria-label={social.platform}
                         >

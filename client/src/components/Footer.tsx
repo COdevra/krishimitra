@@ -19,6 +19,10 @@ const SocialIcon: React.FC<{ icon: string }> = ({ icon }) => {
 };
 
 const Footer: React.FC = () => {
+  const handleSocialClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+  };
+
   return (
     <footer className="bg-white shadow-inner py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +59,8 @@ const Footer: React.FC = () => {
             {SOCIAL_LINKS.map((social) => (
               <a 
                 key={social.platform} 
-                href={social.url} 
+                href="#" 
+                onClick={handleSocialClick}
                 className="text-neutral-500 hover:text-[#196F3D] hover:bg-[#196F3D]/5 p-2 rounded-full transition-colors duration-300"
               >
                 <span className="sr-only">{social.platform}</span>
