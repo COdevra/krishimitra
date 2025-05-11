@@ -86,9 +86,11 @@ const FeaturesSection: React.FC = () => {
                   <p className="mt-2 text-neutral-700 flex-grow">
                     {feature.description}
                   </p>
-                  <div className={`mt-4 text-[#196F3D] font-medium flex items-center transition-opacity duration-300 ${hoveredItem === index ? 'opacity-100' : 'opacity-0'}`}>
-                    <span>Learn more</span>
-                    <ChevronRight className="h-4 w-4 ml-1" />
+                  <div className="mt-4 text-[#196F3D] font-medium flex items-center cursor-pointer group/learnmore">
+                    <span className="relative after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#196F3D] after:scale-x-0 group-hover/learnmore:after:scale-x-100 after:transition-transform after:duration-300">
+                      Learn more
+                    </span>
+                    <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover/learnmore:translate-x-1" />
                   </div>
                 </CardContent>
               </Card>

@@ -15,9 +15,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>KrishiMitra - Empowering Smallholder Farmers with Technology</title>
+        <title>KrishiMitra - Friend of Farmers</title>
         <meta name="description" content="KrishiMitra is an AI-powered digital platform providing personalized agricultural insights, market information, and weather updates to smallholder farmers in South Asia." />
-        <meta property="og:title" content="KrishiMitra - Empowering Smallholder Farmers" />
+        <meta property="og:title" content="KrishiMitra - Friend of Farmers" />
         <meta property="og:description" content="An AI-powered digital platform helping smallholder farmers improve productivity and income through personalized agricultural insights." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://krishimitra.com" />

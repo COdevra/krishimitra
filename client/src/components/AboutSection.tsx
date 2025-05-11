@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Home, Users, Store } from "lucide-react";
+import tomatoHarvestImage from "../assets/tomato_harvest_Nepal.jpg";
 
 const AboutSection: React.FC = () => {
   return (
@@ -16,9 +17,9 @@ const AboutSection: React.FC = () => {
         <div className="mt-16 lg:flex lg:items-center lg:justify-between">
           <div className="lg:w-1/2">
             <img 
-              className="rounded-lg shadow-xl w-full h-auto" 
-              src="https://pixabay.com/get/g1e71dfd4df1bb761531cc5c996099cc4dfa1ef7efba43ef85a36b88ac6451e7237c7e87f30cb2141fbb15b14717dcdebf0c97c5e436d3a36fe0e3170bcfeba52_1280.jpg"
-              alt="Small holder farmers working in rice fields" 
+              className="rounded-lg shadow-xl w-full h-auto object-cover" 
+              src={tomatoHarvestImage}
+              alt="Tomato harvest in Nepal" 
             />
           </div>
           <div className="mt-10 lg:mt-0 lg:w-1/2 lg:pl-12">

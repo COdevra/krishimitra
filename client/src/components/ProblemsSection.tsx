@@ -2,6 +2,9 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { FARMER_PROBLEMS } from "@/lib/constants";
 import { CloudSunRain, Wallet, Tractor } from "lucide-react";
+import problemImage1 from "../assets/time.jpg";
+import problemImage2 from "../assets/market.jpg";
+import problemImage3 from "../assets/countryside-6700296_1280.jpg";
 
 const ProblemIcon: React.FC<{ icon: string; className?: string }> = ({ icon, className }) => {
   switch (icon) {
@@ -17,11 +20,7 @@ const ProblemIcon: React.FC<{ icon: string; className?: string }> = ({ icon, cla
 };
 
 // Images for each problem
-const problemImages = [
-  "https://images.unsplash.com/photo-1559382710-d0cd8baf859a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=240",
-  "https://images.unsplash.com/photo-1624397630740-b8a6c04a98ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=240",
-  "https://images.unsplash.com/photo-1628352081506-83c43123ed8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=240"
-];
+const problemImages = [problemImage1, problemImage2, problemImage3];
 
 const ProblemsSection: React.FC = () => {
   return (

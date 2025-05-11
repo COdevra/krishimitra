@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Logo from "./Logo";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { SOLUTION_POINTS } from "@/lib/constants";
+import workImage from "../assets/farmer-6530444_1280.jpg";
 
 const SolutionSection: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const SolutionSection: React.FC = () => {
         <div className="mt-16 lg:flex lg:items-center lg:justify-between">
           <div className="lg:w-1/2 lg:pr-12">
             <div className="flex items-center">
-              <Logo size={64} />
+              <Logo size={250} />
             </div>
             <p className="mt-6 text-lg text-neutral-700">
               KrishiMitra is an AI-powered digital platform designed specifically for small holder farmers in South Asia, providing them with:
@@ -40,7 +41,7 @@ const SolutionSection: React.FC = () => {
           <div className="mt-10 lg:mt-0 lg:w-1/2">
             <img 
               className="rounded-lg shadow-xl w-full h-auto" 
-              src="https://pixabay.com/get/g656799c77da4c1603211786b2045b41ee9c955a9a1427ffa0b713445e0158d30f4209260299f6bbaa67131ebe1aa9a3a58faa0f93a7e8f7c995762181e6ac92e_1280.jpg" 
+              src={workImage} 
               alt="Happy farmer with improved harvest" 
             />
           </div>

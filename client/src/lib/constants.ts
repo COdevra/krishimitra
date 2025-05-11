@@ -155,26 +155,26 @@ export const INVESTMENT_USES = [
 export const CONTACT_INFO = [
   {
     title: "Office Address",
-    value: "Kathmandu, Nepal",
+    value: "Panchakanya-1, Nuwakot, Nepal",
     icon: "MapPin",
   },
   {
     title: "Email",
-    value: "info@krishimitra.com",
+    value: "contact@ird.com.np",
     icon: "Mail",
   },
   {
     title: "Phone",
-    value: "+977 1 4123456",
+    value: "+977 9843504464",
     icon: "Phone",
   },
 ];
 
 export const SOCIAL_LINKS = [
-  { platform: "Facebook", icon: "Facebook", url: "#" },
-  { platform: "Twitter", icon: "Twitter", url: "#" },
-  { platform: "Instagram", icon: "Instagram", url: "#" },
-  { platform: "LinkedIn", icon: "Linkedin", url: "#" },
+  { platform: "Facebook", icon: "Facebook", url: "https://facebook.com/krishimitra" },
+  { platform: "Twitter", icon: "Twitter", url: "https://twitter.com/krishimitra" },
+  { platform: "Instagram", icon: "Instagram", url: "https://instagram.com/krishimitra" },
+  { platform: "LinkedIn", icon: "Linkedin", url: "https://linkedin.com/company/krishimitra" },
 ];
 
 export const FOOTER_LINKS = [
@@ -185,14 +185,6 @@ export const FOOTER_LINKS = [
       { label: "Team", href: "#team" },
       { label: "Impact", href: "#sdgs" },
       { label: "Contact", href: "#contact" },
-    ],
-  },
-  {
-    title: "Features",
-    links: [
-      { label: "Problems", href: "#problems" },
-      { label: "Solution", href: "#features" },
-      { label: "Technologies", href: "#features" },
     ],
   },
 ];

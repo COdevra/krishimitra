@@ -7,29 +7,29 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Mail, Phone, Globe, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { CONTACT_INFO, SOCIAL_LINKS } from "@/lib/constants";
 
-const ContactIcon: React.FC<{ icon: string }> = ({ icon }) => {
+const ContactIcon: React.FC<{ icon: string; className?: string }> = ({ icon, className }) => {
   switch (icon) {
     case "MapPin":
-      return <MapPin className="h-6 w-6" />;
+      return <MapPin className={`h-6 w-6 ${className || ''}`} />;
     case "Mail":
-      return <Mail className="h-6 w-6" />;
+      return <Mail className={`h-6 w-6 ${className || ''}`} />;
     case "Phone":
-      return <Phone className="h-6 w-6" />;
+      return <Phone className={`h-6 w-6 ${className || ''}`} />;
     default:
       return null;
   }
 };
 
-const SocialIcon: React.FC<{ icon: string }> = ({ icon }) => {
+const SocialIcon: React.FC<{ icon: string; className?: string }> = ({ icon, className }) => {
   switch (icon) {
     case "Facebook":
-      return <Facebook className="h-5 w-5" />;
+      return <Facebook className={`h-5 w-5 ${className || ''}`} />;
     case "Twitter":
-      return <Twitter className="h-5 w-5" />;
+      return <Twitter className={`h-5 w-5 ${className || ''}`} />;
     case "Instagram":
-      return <Instagram className="h-5 w-5" />;
+      return <Instagram className={`h-5 w-5 ${className || ''}`} />;
     case "Linkedin":
-      return <Linkedin className="h-5 w-5" />;
+      return <Linkedin className={`h-5 w-5 ${className || ''}`} />;
     default:
       return null;
   }
@@ -43,6 +43,8 @@ const ContactSection: React.FC = () => {
     message: "",
   });
 
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -50,15 +52,18 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // This would normally be connected to a backend API
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    setFormStatus('submitting');
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setFormStatus('success');
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    }, 1000);
   };
 
   return (
@@ -76,7 +81,7 @@ const ContactSection: React.FC = () => {
             <div className="lg:w-1/2 p-8">
               <h3 className="text-2xl font-bold text-neutral-900">Get in Touch</h3>
               <p className="mt-4 text-neutral-700">
-                Fill out the form and our team will get back to you within 24 hours.
+                Fill out the form and our team will get back to you.
               </p>
               <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                 <div>
@@ -89,6 +94,7 @@ const ContactSection: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    disabled={formStatus === 'submitting'}
                   />
                 </div>
                 <div>
@@ -101,6 +107,7 @@ const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    disabled={formStatus === 'submitting'}
                   />
                 </div>
                 <div>
@@ -113,6 +120,7 @@ const ContactSection: React.FC = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
+                    disabled={formStatus === 'submitting'}
                   />
                 </div>
                 <div>
@@ -125,11 +133,21 @@ const ContactSection: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    disabled={formStatus === 'submitting'}
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  disabled={formStatus === 'submitting'}
+                >
+                  {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
                 </Button>
+                {formStatus === 'success' && (
+                  <p className="text-green-600 text-center">
+                    Thank you for your message! Please contact us directly at {CONTACT_INFO[1].value} for a response.
+                  </p>
+                )}
               </form>
             </div>
             <div className="lg:w-1/2 bg-neutral-50 p-8 flex flex-col justify-center">
@@ -143,7 +161,7 @@ const ContactSection: React.FC = () => {
                 
                 {CONTACT_INFO.map((info) => (
                   <div key={info.title} className="flex">
-                    <ContactIcon icon={info.icon} className="text-primary text-xl mt-1" />
+                    <ContactIcon icon={info.icon} className="text-primary" />
                     <div className="ml-4">
                       <h4 className="text-lg font-medium text-neutral-900">{info.title}</h4>
                       <p className="mt-1 text-neutral-700">{info.value}</p>
@@ -160,7 +178,9 @@ const ContactSection: React.FC = () => {
                         <a 
                           key={social.platform} 
                           href={social.url} 
-                          className="text-neutral-700 hover:text-primary"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-neutral-700 hover:text-primary transition-colors"
                           aria-label={social.platform}
                         >
                           <SocialIcon icon={social.icon} />

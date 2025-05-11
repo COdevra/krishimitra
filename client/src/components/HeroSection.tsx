@@ -1,42 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users } from "lucide-react";
-import heroImage from "../assets/Puja Khatri-3_page-0001.jpg";
+import { ArrowRight, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import heroImage1 from "../assets/slide.jpg";
+import heroImage2 from "../assets/slide2.jpg";
+import heroImage3 from "../assets/slide3.jpg";
+const heroImages = [heroImage1, heroImage2, heroImage3];
 
 const HeroSection: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+
+  const nextImage = () => setCurrent((prev) => (prev + 1) % heroImages.length);
+  const prevImage = () => setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+
   return (
-    <section id="home" className="bg-[#196F3D] py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:flex lg:items-center lg:justify-between">
-          <div className="lg:w-1/2">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Empowering Smallholder Farmers in Developing Nations
-            </h1>
-            <p className="mt-4 text-lg text-white opacity-90">
-              KrishiMitra is an AI-powered digital platform providing personalized agricultural insights, market information, and weather updates to smallholder farmers in South Asia.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <Button asChild size="lg" variant="secondary">
-                <a href="#features" className="flex items-center">
-                  Explore Features
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-[#196F3D]">
-                <a href="#contact" className="flex items-center">
-                  Join Our Mission
-                  <Users className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-          <div className="mt-10 lg:mt-0 lg:w-1/2 overflow-hidden rounded-lg shadow-xl">
-            <img 
-              className="w-full h-auto transform transition-transform duration-300 hover:scale-105" 
-              src={heroImage} 
-              alt="Farmers plowing field with ox in terraced farm landscape" 
-            />
-          </div>
+    <section id="home" className="relative h-[90vh] min-h-[500px] flex items-center overflow-hidden">
+      {/* Background Image Slider */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img
+          src={heroImages[current]}
+          alt="Hero background"
+          className="w-full h-full object-cover transition-all duration-700"
+        />
+        {/* Overlay for darkening the image for text readability */}
+        <div className="absolute inset-0 bg-[#196F3D]/60" />
+        {/* Left Arrow */}
+        <button
+          onClick={prevImage}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white text-[#196F3D] rounded-full p-2 shadow-md transition pointer-events-auto"
+          aria-label="Previous image"
+          style={{ marginRight: '12px' }}
+        >
+          <ChevronLeft className="h-8 w-8" />
+        </button>
+        {/* Right Arrow */}
+        <button
+          onClick={nextImage}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/70 hover:bg-white text-[#196F3D] rounded-full p-2 shadow-md transition pointer-events-auto"
+          aria-label="Next image"
+          style={{ marginLeft: '12px' }}
+        >
+          <ChevronRight className="h-8 w-8" />
+        </button>
+      </div>
+      {/* Content Overlay - left aligned */}
+      <div className="relative z-10 max-w-3xl px-4 text-left ml-12 md:ml-20 lg:ml-32">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight drop-shadow-lg">
+          Empowering Smallholder Farmers in Developing Nations
+        </h1>
+        <p className="mt-4 text-lg text-white opacity-90 drop-shadow-md">
+          KrishiMitra is an AI-powered digital platform providing personalized agricultural insights, market information, and weather updates to smallholder farmers in South Asia.
+        </p>
+        <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+          <Button asChild size="lg" variant="secondary">
+            <a href="#features" className="flex items-center">
+              Explore Features
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="text-black border-white">
+            <a href="#contact" className="flex items-center">
+              Join Our Mission
+              <Users className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
