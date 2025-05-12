@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import teamPageImage from "../assets/download.jpeg";
+import teamPageImage from "../assets/aakriti.jpg";
 import teamPageImage2 from "../assets/laxman bista.jpeg";
-import teamPageImage3 from "../assets/puja.jpeg";
+import teamPageImage3 from "../assets/puja.png";
 import teamPageImage4 from "../assets/devaki.jpeg";
 import teamPageImage5 from "../assets/small.jpg";
 import teamPageImage6 from "../assets/aakash.jpeg";
@@ -25,13 +25,13 @@ const TeamSection: React.FC = () => {
     },
     {
       name: "Laxman Bista",
-      role: "Founder & Executive Director",
+      role: "Advisor",
       image: teamPageImage2,
       bio: "Laxman is the visionary behind KrishiMitra, driving strategy and partnerships.",
     },
     {
       name: "Puja Khatri",
-      role: "Co-Founder & Chief Financial Officer (CFO)",
+      role: "Co-Founder & Chief Executive Officer (CEO)",
       image: teamPageImage3,
       bio: "Puja ensures our financial sustainability and manages resources efficiently.",
     },
@@ -43,7 +43,7 @@ const TeamSection: React.FC = () => {
     },
     {
       name: "Manish Acharya",
-      role: "Chief Technology Officer (CTO)",
+      role: "Chief Financial & Technological Officer (CFO & CTO)",
       image: teamPageImage5,
       bio: "Manish leads our tech team, building robust and scalable digital solutions.",
     },

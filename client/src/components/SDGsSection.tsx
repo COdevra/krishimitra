@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import povertyImage from "../assets/poverty.jpg";
 import hungerImage from "../assets/hunger.jpg";
 import workImage from "../assets/work.jpg";
-
+import responsibleImage from "../assets/save-energy-7382275_1280.png";
 interface SDG {
   number: number;
   title: string;
@@ -38,6 +38,14 @@ const SDGsSection: React.FC = () => {
       color: "#A21942",
       iconBg: "#F7E4E9",
       image: workImage
+    },
+    {
+      number: 12,
+      title: "Responsible Consumption and Production",
+      description: "Promoting local supply chains and reducing waste through sustainable farming practices.",
+      color: "#A21942",
+      iconBg: "#F9F1E0",
+      image: responsibleImage
     }
   ];
 
@@ -52,10 +60,12 @@ const SDGsSection: React.FC = () => {
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {sdgs.map((sdg) => (
+          {sdgs.map((sdg, index) => (
             <Card 
               key={sdg.number} 
-              className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className={`overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${
+                index === 3 ? 'md:col-start-2' : ''
+              }`}
             >
               <div className="h-48 overflow-hidden">
                 <img 
