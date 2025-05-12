@@ -83,6 +83,14 @@ export const SDGS = [
     description: "Supporting sustainable economic growth in agricultural communities through technology adoption and market access.",
     color: "bg-red-100",
   },
+
+  {
+    number: 12,
+    title: "Responsible Consumption and Production",
+    description: "Promoting local supply chains and reducing waste through sustainable farming practices.",
+    color: "bg-green-100",
+  }
+
 ];
 
 export const GEOGRAPHICAL_FOCUS = [
@@ -160,12 +168,12 @@ export const CONTACT_INFO = [
   },
   {
     title: "Email",
-    value: "contact@ird.com.np",
+    value: "info.krishimitra.np@gmail.com",
     icon: "Mail",
   },
   {
     title: "Phone",
-    value: "+977 9843504464",
+    value: "+977 9863249000 , +1(949)866-0442",
     icon: "Phone",
   },
 ];
@@ -173,7 +181,7 @@ export const CONTACT_INFO = [
 export const SOCIAL_LINKS = [
   { platform: "Facebook", icon: "Facebook", url: "https://facebook.com/krishimitra" },
   { platform: "Twitter", icon: "Twitter", url: "https://twitter.com/krishimitra" },
-  { platform: "Instagram", icon: "Instagram", url: "https://instagram.com/krishimitra" },
+  { platform: "Instagram", icon: "Instagram", url: "https://instagram.com/krishimitra2025" },
   { platform: "LinkedIn", icon: "Linkedin", url: "https://linkedin.com/company/krishimitra" },
 ];
 

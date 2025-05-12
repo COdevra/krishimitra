@@ -59,8 +59,8 @@ const Footer: React.FC = () => {
             {SOCIAL_LINKS.map((social) => (
               <a 
                 key={social.platform} 
-                href="#" 
-                onClick={handleSocialClick}
+                href={social.platform === "Instagram" ? "https://instagram.com/krishimitra2025" : "#"} 
+                onClick={social.platform === "Instagram" ? undefined : handleSocialClick}
                 className="text-neutral-500 hover:text-[#196F3D] hover:bg-[#196F3D]/5 p-2 rounded-full transition-colors duration-300"
               >
                 <span className="sr-only">{social.platform}</span>

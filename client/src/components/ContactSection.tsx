@@ -181,8 +181,8 @@ const ContactSection: React.FC = () => {
                       {SOCIAL_LINKS.map((social) => (
                         <a 
                           key={social.platform} 
-                          href="#" 
-                          onClick={handleSocialClick}
+                          href={social.platform === "Instagram" ? "https://instagram.com/krishimitra2025" : "#"} 
+                          onClick={social.platform === "Instagram" ? undefined : handleSocialClick}
                           className="text-neutral-700 hover:text-primary transition-colors"
                           aria-label={social.platform}
                         >
