@@ -187,7 +187,7 @@ export const SOCIAL_LINKS = [
 
 export const FOOTER_LINKS = [
   {
-    title: "Navigation",
+    title: "Quick Links",
     links: [
       { label: "Home", href: "#home" },
       { label: "Team", href: "#team" },

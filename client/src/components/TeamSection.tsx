@@ -17,24 +17,29 @@ interface TeamMember {
 
 const TeamSection: React.FC = () => {
   const teamMembers: TeamMember[] = [
+
     {
-      name: "Aakriti Khapung Limbu",
-      role: "Co-Founder & Chief Marketing Officer (CMO)",
-      image: teamPageImage,
-      bio: "Aakriti is passionate about rural empowerment and leads our outreach and marketing efforts.",
+      name: "Puja Khatri",
+      role: "Co-Founder & Chief Executive Officer (CEO)",
+      image: teamPageImage3,
+      bio: "Puja ensures our overall operations and manages resources efficiently.",
     },
+    
+    
     {
       name: "Laxman Bista",
       role: "Advisor",
       image: teamPageImage2,
       bio: "Laxman is the visionary behind KrishiMitra, driving strategy and partnerships.",
     },
+
     {
-      name: "Puja Khatri",
-      role: "Co-Founder & Chief Executive Officer (CEO)",
-      image: teamPageImage3,
-      bio: "Puja ensures our financial sustainability and manages resources efficiently.",
+      name: "Aakriti Khapung Limbu",
+      role: "Co-Founder & Chief Marketing Officer (CMO)",
+      image: teamPageImage,
+      bio: "Aakriti is passionate about rural empowerment and leads our outreach and marketing efforts.",
     },
+  
     {
       name: "Devaki Rawal",
       role: "Frontend Developer",
@@ -45,7 +50,7 @@ const TeamSection: React.FC = () => {
       name: "Manish Acharya",
       role: "Chief Financial & Technological Officer (CFO & CTO)",
       image: teamPageImage5,
-      bio: "Manish leads our tech team, building robust and scalable digital solutions.",
+      bio: "Manish leads our tech team and finances, building robust and scalable digital solutions.",
     },
     {
       name: "Aakash Bagale Thapa",
@@ -73,7 +78,7 @@ const TeamSection: React.FC = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-center transform transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-contain object-center transform transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-white text-sm px-4 text-center">{member.bio}</span>

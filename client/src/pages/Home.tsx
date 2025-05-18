@@ -31,11 +31,11 @@ const Home: React.FC = () => {
         <main className="flex-grow">
           <HeroSection />
           <AboutSection />
-          <TeamSection />
           <ProblemsSection />
           <SolutionSection />
           <FeaturesSection />
           <SDGsSection />
+          <TeamSection />
           <ContactSection />
         </main>
         <Footer />
