@@ -71,11 +71,11 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-primary">
+    <section id="contact" className="py-16 bg-[#196F3D]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white">Join Our Mission</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-white opacity-90">
+          <h2 className="text-3xl font-bold text-[#196F3D]">Join Our Mission</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-neutral-700">
             Interested in supporting KrishiMitra? Reach out to us!
           </p>
         </div>
@@ -83,7 +83,7 @@ const ContactSection: React.FC = () => {
         <Card className="mt-16 overflow-hidden">
           <div className="lg:flex">
             <div className="lg:w-1/2 p-8">
-              <h3 className="text-2xl font-bold text-neutral-900">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-[#196F3D]">Get in Touch</h3>
               <p className="mt-4 text-neutral-700">
                 Fill out the form and our team will get back to you.
               </p>
@@ -157,7 +157,7 @@ const ContactSection: React.FC = () => {
             <div className="lg:w-1/2 bg-neutral-50 p-8 flex flex-col justify-center">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-neutral-900">Contact Information</h3>
+                  <h3 className="text-2xl font-bold text-[#196F3D]">Contact Information</h3>
                   <p className="mt-2 text-neutral-700">
                     Have questions or want to learn more about KrishiMitra? We're here to help!
                   </p>
@@ -167,7 +167,7 @@ const ContactSection: React.FC = () => {
                   <div key={info.title} className="flex">
                     <ContactIcon icon={info.icon} className="text-primary" />
                     <div className="ml-4">
-                      <h4 className="text-lg font-medium text-neutral-900">{info.title}</h4>
+                      <h4 className="text-lg font-medium text-[#196F3D]">{info.title}</h4>
                       <p className="mt-1 text-neutral-700">{info.value}</p>
                     </div>
                   </div>
@@ -176,7 +176,7 @@ const ContactSection: React.FC = () => {
                 <div className="flex">
                   <Globe className="text-primary text-xl mt-1" />
                   <div className="ml-4">
-                    <h4 className="text-lg font-medium text-neutral-900">Social Media</h4>
+                    <h4 className="text-lg font-medium text-[#196F3D]">Social Media</h4>
                     <div className="mt-2 flex space-x-4">
                       {SOCIAL_LINKS.map((social) => (
                         <a 

@@ -4,6 +4,8 @@ import { ArrowRight, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import heroImage1 from "../assets/slide.jpg";
 import heroImage2 from "../assets/slide2.jpg";
 import heroImage3 from "../assets/slide3.jpg";
+import { Link } from "react-router-dom";
+
 const heroImages = [heroImage1, heroImage2, heroImage3];
 
 const HeroSection: React.FC = () => {
@@ -68,10 +70,10 @@ const HeroSection: React.FC = () => {
             </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="text-black border-white">
-            <a href="#contact" className="flex items-center">
+            <Link to="/contact" className="flex items-center">
               Join Our Mission
               <Users className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

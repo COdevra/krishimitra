@@ -6,6 +6,8 @@ import teamPageImage3 from "../assets/puja.png";
 import teamPageImage4 from "../assets/devaki.jpeg";
 import teamPageImage5 from "../assets/small.jpg";
 import teamPageImage6 from "../assets/aakash.jpeg";
+// Assuming a generic advisor image exists or using a placeholder
+import genericAdvisorImage from "../assets/devaki.jpeg"; 
 
 
 interface TeamMember {
@@ -58,13 +60,31 @@ const TeamSection: React.FC = () => {
       image: teamPageImage6,
       bio: "Aakash is the backend developer who ensures the smooth functioning of the platform.",
     },
+    {
+      name: "Mary Patrick Kavanaugh",
+      role: "Advisor",
+      image: genericAdvisorImage,
+      bio: "Mary provides valuable guidance and expertise to our team.",
+    },
+    {
+      name: "Eddie Ng",
+      role: "Advisor",
+      image: genericAdvisorImage,
+      bio: "Eddie offers strategic advice to support KrishiMitra's growth.",
+    },
+    {
+      name: "Alexandra Moaser",
+      role: "Advisor",
+      image: genericAdvisorImage,
+      bio: "Alexandra contributes her experience to help shape our future directions.",
+    },
   ];
 
   return (
     <section id="team" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-neutral-900">Our Team</h2>
+          <h2 className="text-3xl font-bold text-[#196F3D]">Our Team</h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-neutral-700">
             Meet the passionate individuals behind KrishiMitra
           </p>

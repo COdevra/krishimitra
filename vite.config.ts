@@ -20,4 +20,5 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
+  assetsInclude: ['**/*.JPG', '**/*.jpeg', '**/*.PNG'],
 });

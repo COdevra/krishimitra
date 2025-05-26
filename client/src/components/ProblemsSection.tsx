@@ -24,12 +24,12 @@ const problemImages = [problemImage1, problemImage2, problemImage3];
 
 const ProblemsSection: React.FC = () => {
   return (
-    <section id="problems" className="py-16 bg-neutral-50">
+    <section id="problems" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-neutral-900">What are the problems?</h2>
+          <h2 className="text-3xl font-bold text-[#196F3D]">Problems Faced by Smallholder Farmers</h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-neutral-700">
-            Small holder farmers face significant challenges that limit their productivity and income
+            Understanding the challenges faced by smallholder farmers in South Asia
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const ProblemsSection: React.FC = () => {
                             <ProblemIcon icon={problem.icon} className="text-white text-xl" />
                           </div>
                           <div className="ml-5">
-                            <h3 className="text-lg leading-6 font-medium text-neutral-900">{problem.title}</h3>
+                            <h3 className="text-lg leading-6 font-medium text-[#196F3D]">{problem.title}</h3>
                             <p className="mt-2 text-neutral-700">{problem.description}</p>
                           </div>
                         </div>
@@ -71,7 +71,7 @@ const ProblemsSection: React.FC = () => {
                             <ProblemIcon icon={problem.icon} className="text-white text-xl" />
                           </div>
                           <div className="ml-5">
-                            <h3 className="text-lg leading-6 font-medium text-neutral-900">{problem.title}</h3>
+                            <h3 className="text-lg leading-6 font-medium text-[#196F3D]">{problem.title}</h3>
                             <p className="mt-2 text-neutral-700">{problem.description}</p>
                           </div>
                         </div>

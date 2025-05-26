@@ -3,12 +3,9 @@ import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import TeamSection from '@/components/TeamSection';
-import ProblemsSection from '@/components/ProblemsSection';
-import SolutionSection from '@/components/SolutionSection';
+import FieldVisitSection from '@/components/FieldVisitSection';
 import FeaturesSection from '@/components/FeaturesSection';
-import SDGsSection from '@/components/SDGsSection';
-import ContactSection from '@/components/ContactSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
 
 const Home: React.FC = () => {
@@ -31,12 +28,9 @@ const Home: React.FC = () => {
         <main className="flex-grow">
           <HeroSection />
           <AboutSection />
-          <ProblemsSection />
-          <SolutionSection />
+          <FieldVisitSection />
           <FeaturesSection />
-          <SDGsSection />
-          <TeamSection />
-          <ContactSection />
+          <TestimonialsSection />
         </main>
         <Footer />
       </div>

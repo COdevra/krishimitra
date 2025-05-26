@@ -50,11 +50,11 @@ const SDGsSection: React.FC = () => {
   ];
 
   return (
-    <section id="sdgs" className="py-16 bg-white">
+    <section id="sdgs" className="py-16 bg-[#196F3D]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-[#196F3D]">Sustainable Development Goals</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-neutral-700">
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-[#196F3D]">
             KrishiMitra contributes to these key UN Sustainable Development Goals
           </p>
         </div>
@@ -86,7 +86,7 @@ const SDGsSection: React.FC = () => {
                   >
                     <span className="text-white font-bold text-xl">{sdg.number}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-neutral-900">
+                  <h3 className="text-lg font-bold text-[#196F3D]">
                     {sdg.title}
                   </h3>
                 </div>

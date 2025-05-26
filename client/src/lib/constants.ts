@@ -1,8 +1,8 @@
 export const NAVBAR_LINKS = [
-  { title: "Home", href: "#home" },
-  { title: "Team", href: "#team" },
-  { title: "Impact", href: "#sdgs" },
-  { title: "Contact", href: "#contact" },
+  { title: "Home", href: "/" },
+  { title: "Team", href: "/team" },
+  { title: "Impact", href: "/impact" },
+  { title: "Contact", href: "/contact" },
 ];
 
 export const FARMER_PROBLEMS = [
@@ -189,10 +189,10 @@ export const FOOTER_LINKS = [
   {
     title: "Quick Links",
     links: [
-      { label: "Home", href: "#home" },
-      { label: "Team", href: "#team" },
-      { label: "Impact", href: "#sdgs" },
-      { label: "Contact", href: "#contact" },
+      { label: "Home", href: "/" },
+      { label: "Team", href: "/team" },
+      { label: "Impact", href: "/impact" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];

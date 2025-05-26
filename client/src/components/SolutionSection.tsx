@@ -7,10 +7,13 @@ import workImage from "../assets/farmer-6530444_1280.jpg";
 
 const SolutionSection: React.FC = () => {
   return (
-    <section className="py-16 bg-white">
+    <section id="solution" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-neutral-900">What is the solution?</h2>
+          <h2 className="text-3xl font-bold text-[#196F3D]">Our Solution</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-neutral-700">
+            How KrishiMitra addresses the challenges faced by farmers
+          </p>
         </div>
 
         <div className="mt-16 lg:flex lg:items-center lg:justify-between">
@@ -21,7 +24,7 @@ const SolutionSection: React.FC = () => {
             <p className="mt-6 text-lg text-neutral-700">
               KrishiMitra is an AI-powered digital platform designed specifically for small holder farmers in South Asia, providing them with:
             </p>
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-6 space-y-4 leading-relaxed text-neutral-700 text-lg">
               {SOLUTION_POINTS.map((point, index) => (
                 <li key={index} className="flex">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />

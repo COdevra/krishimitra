@@ -8,7 +8,7 @@ const AboutSection: React.FC = () => {
     <section id="about" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-neutral-900">Who are Small Holder Farmers?</h2>
+          <h2 className="text-3xl font-bold text-[#196F3D]">Who are Small Holder Farmers?</h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-neutral-700">
             The backbone of agricultural production in South Asia
           </p>
