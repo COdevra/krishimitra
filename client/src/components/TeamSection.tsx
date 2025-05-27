@@ -7,7 +7,9 @@ import teamPageImage4 from "../assets/devaki.jpeg";
 import teamPageImage5 from "../assets/small.jpg";
 import teamPageImage6 from "../assets/aakash.jpeg";
 // Assuming a generic advisor image exists or using a placeholder
-import genericAdvisorImage from "../assets/devaki.jpeg"; 
+import genericAdvisorImage1 from "../assets/mary.jpg"; 
+import genericAdvisorImage2 from "../assets/eddie.jpg"; 
+import genericAdvisorImage3 from "../assets/alexandra.jpg"; 
 
 
 interface TeamMember {
@@ -24,58 +26,53 @@ const TeamSection: React.FC = () => {
       name: "Puja Khatri",
       role: "Co-Founder & Chief Executive Officer (CEO)",
       image: teamPageImage3,
-      bio: "Puja ensures our overall operations and manages resources efficiently.",
+      bio: "Puja is a current undergraduate at Soka University of America. Known for her kind and easygoing personality, Puja ensures the overall operations run smoothly and resources are managed efficiently. She is passionate about sustainable development and leads with empathy, clarity, and purpose.",
     },
     
     
     {
       name: "Laxman Bista",
-      role: "Advisor",
+      role: "Chief Financial Officer (CFO)",
       image: teamPageImage2,
-      bio: "Laxman is the visionary behind KrishiMitra, driving strategy and partnerships.",
+      bio: "Laxman is a Dartmouth graduate and the strategic force behind KrishiMitra’s growth. Beyond managing finances, he serves as the guiding light behind every major step and success of the project. Laxman’s visionary mindset and dependable leadership make him an integral part of our mission.",
     },
 
     {
       name: "Aakriti Khapung Limbu",
       role: "Co-Founder & Chief Marketing Officer (CMO)",
       image: teamPageImage,
-      bio: "Aakriti is passionate about rural empowerment and leads our outreach and marketing efforts.",
+      bio: "Aakriti is a current undergraduate at Soka University of America. She is creative, friendly, and full of energy. Aakriti leads all marketing and outreach efforts, helping more people connect with KrishiMitra’s mission. Her strong communication skills and leadership make her a key part of the team.",
     },
   
     {
       name: "Devaki Rawal",
-      role: "Frontend Developer",
+      role: "Web Developer and Research Analyst",
       image: teamPageImage4,
-      bio: "Devaki is the frontend developer who ensures the smooth functioning of the platform.",
+      bio: "Devaki is a high school graduate who believes in using technology to make a difference. She has visited villages, collected data, and talked to farmers to understand their needs. Devaki connects technology with farming and helps farmers build a digital presence to improve their livelihoods.",
     },
     {
       name: "Manish Acharya",
-      role: "Chief Financial & Technological Officer (CFO & CTO)",
+      role: "Chief Technological Officer (CTO)",
       image: teamPageImage5,
-      bio: "Manish leads our tech team and finances, building robust and scalable digital solutions.",
+      bio: "Manish Acharya is a current undergraduate at Vanderbilt University and a passionate tech enthusiast. With a deep understanding of system architecture and product development, Manish oversees KrishiMitra’s technological foundation. He is dedicated to building scalable and innovative solutions that meet the real needs of farmers and bring lasting impact through technology.",
     },
-    {
-      name: "Aakash Bagale Thapa",
-      role: "Backend Developer",
-      image: teamPageImage6,
-      bio: "Aakash is the backend developer who ensures the smooth functioning of the platform.",
-    },
+  
     {
       name: "Mary Patrick Kavanaugh",
       role: "Advisor",
-      image: genericAdvisorImage,
+      image: genericAdvisorImage1,
       bio: "Mary provides valuable guidance and expertise to our team.",
     },
     {
       name: "Eddie Ng",
       role: "Advisor",
-      image: genericAdvisorImage,
+      image: genericAdvisorImage2,
       bio: "Eddie offers strategic advice to support KrishiMitra's growth.",
     },
     {
       name: "Alexandra Moaser",
       role: "Advisor",
-      image: genericAdvisorImage,
+      image: genericAdvisorImage3,
       bio: "Alexandra contributes her experience to help shape our future directions.",
     },
   ];

@@ -11,40 +11,47 @@ interface Testimonial {
 
 const TestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
+   
     {
-      name: "Ram Bahadur",
-      role: "Smallholder Farmer, Nuwakot",
-      quote: "KrishiMitra has transformed how I farm. The weather updates and market prices help me make better decisions.",
+      name: "Sanu Pathak",
+      role: "Farmer from Nuwakot",
+      quote: "My father taught me to predict the weather just by looking at the sky. It used to work but now, with all the climate changes, that no longer helps. I've lost crops because I didn't know the right weather at the right time. KrishiMitra bridges that gap. Now, I get timely updates that help me plan better and protect my harvest."
     },
     {
-      name: "Sita Devi",
-      role: "Organic Farmer, Kathmandu",
-      quote: "The personalized advice has helped me increase my crop yield significantly. I'm grateful for this platform.",
+      name: "Ganga Tamang",
+      role: "Farmer from Nuwakot",
+      quote: "I've thrown away my vegetables so many times because the traders wouldn't pay me fairly. Sometimes, I didn't even recover 10% of what I spent to grow them. It felt pointless to sell. If KrishiMitra can give us access to a digital marketplace, we'll know exactly who to sell to and at a fair price. That would make a big difference in my income."
     },
     {
-      name: "Hari Prasad",
-      role: "Vegetable Farmer, Lalitpur",
-      quote: "The market price information helps me get better deals for my produce. It's like having a market expert in my pocket.",
+      name: "Bhagwan Poudel",
+      role: "Farmer from Nuwakot",
+      quote: "I didn't have parents to teach me farming. I never learned how to properly do seedling for major crops like rice, and most of the time, my harvests failed. The content and farming guidance on KrishiMitra means so much to me—it feels like I finally have a family to learn from."
     },
     {
-      name: "Laxmi Tamang",
-      role: "Tea Farmer, Ilam",
-      quote: "The crop disease alerts have saved my tea garden multiple times. This app is a blessing for farmers like me.",
+      name: "Suman Rai",
+      role: "Farmer from Nuwakot",
+      quote: "Most of the time, I spend more on growing crops than I actually earn. When I get paid, it feels like income, but in reality, I'm at a loss. Farming has become a losing business. KrishiMitra's financial literacy support is exactly what we farmers need to understand real profitability and stop settling for less."
     },
     {
-      name: "Krishna Thapa",
-      role: "Rice Farmer, Chitwan",
-      quote: "The farming tips are very practical and easy to follow. My rice production has improved since using KrishiMitra.",
+      name: "Ganesh Khakurel",
+      role: "Farmer from Nuwakot",
+      quote: "I never knew that soil testing was important. I've always grown crops in the same soil my ancestors used. Testing the soil felt expensive and out of reach, so I never considered it. But KrishiMitra's easy and affordable digital soil testing has made my farming more effective, informed, and productive."
     },
     {
-      name: "Maya Gurung",
-      role: "Fruit Farmer, Mustang",
-      quote: "The weather forecasts are accurate and help me plan my farming activities better. Great app for farmers!",
+      name: "Bhabuk Mainali",
+      role: "Farmer from Nuwakot",
+      quote: "Knowing the price of crops means a lot. It helps us bargain confidently with middlemen and ensures we're not cheated."
     },
+    {
+      name: "Parbata Shahi",
+      role: "Farmer from Nuwakot",
+      quote: "Getting a pest alert ahead of time could save my entire harvest and protect my family from going hungry that season."
+    }
+     
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const testimonialsPerPage = 4;
+  const testimonialsPerPage = 3;
   const totalTestimonials = testimonials.length;
 
   const nextTestimonials = () => {
@@ -84,15 +91,16 @@ const TestimonialsSection: React.FC = () => {
             <ChevronLeft className="h-6 w-6" />
           </Button>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {getVisibleTestimonials().map((testimonial, index) => (
               <Card key={`${testimonial.name}-${currentIndex + index}`} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6">
                   <blockquote className="text-neutral-700 italic mb-4">
                     "{testimonial.quote}"
                   </blockquote>
-                  <div>
+                  <div className="flex items-center space-x-2">
                     <p className="font-semibold text-neutral-900">{testimonial.name}</p>
+                    <span className="text-sm text-neutral-600">•</span>
                     <p className="text-sm text-neutral-600">{testimonial.role}</p>
                   </div>
                 </CardContent>

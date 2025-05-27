@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex-1 min-w-0">
             <Link to="/">
-              <Logo textClass="text-white font-bold" />
+              <Logo size={60} variant="circular" textClass="text-white font-bold" />
             </Link>
             <p className="mt-4 text-white max-w-xl">
               Empowering small holder farmers through technology to improve agricultural productivity, income, and sustainability.
