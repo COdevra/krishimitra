@@ -1,34 +1,34 @@
 import React, { useState } from "react";
 
 // Import all images from Survey folder
-import surveyImage1 from "../assets/Survey/IMG_5927.jpg";
-import surveyImage2 from "../assets/Survey/IMG_5922.jpg";
-import surveyImage3 from "../assets/Survey/IMG_5906.jpg";
-import surveyImage4 from "../assets/Survey/IMG_5897.jpg";
-import surveyImage5 from "../assets/Survey/IMG_5892.jpg";
-import surveyImage6 from "../assets/Survey/IMG_5890.jpg";
-import surveyImage7 from "../assets/Survey/IMG_5865.jpg";
-import surveyImage8 from "../assets/Survey/IMG_5860.jpg";
-import surveyImage9 from "../assets/Survey/IMG_5846.jpg";
-import surveyImage10 from "../assets/Survey/IMG_5802.jpg";
-import surveyImage11 from "../assets/Survey/IMG_5798.jpg";
-import surveyImage12 from "../assets/Survey/IMG_5781.jpg";
+import surveyImage1 from "../assets/Survey/IMG_5927.JPG";
+import surveyImage2 from "../assets/Survey/IMG_5922.JPG";
+import surveyImage3 from "../assets/Survey/IMG_5906.JPG";
+import surveyImage4 from "../assets/Survey/IMG_5897.JPG";
+import surveyImage5 from "../assets/Survey/IMG_5892.JPG";
+import surveyImage6 from "../assets/Survey/IMG_5890.JPG";
+import surveyImage7 from "../assets/Survey/IMG_5865.JPG";
+import surveyImage8 from "../assets/Survey/IMG_5860.JPG";
+import surveyImage9 from "../assets/Survey/IMG_5846.JPG";
+import surveyImage10 from "../assets/Survey/IMG_5802.JPG";
+import surveyImage11 from "../assets/Survey/IMG_5798.JPG";
+import surveyImage12 from "../assets/Survey/IMG_5781.JPG";
 
 // Import all images from teach folder
-import teachImage1 from "../assets/teach/IMG_6023.jpg";
-import teachImage2 from "../assets/teach/IMG_6018.jpg";
-import teachImage3 from "../assets/teach/IMG_6017.jpg";
-import teachImage4 from "../assets/teach/IMG_6002.jpg";
-import teachImage5 from "../assets/teach/IMG_6000.jpg";
-import teachImage6 from "../assets/teach/IMG_5997.jpg";
-import teachImage7 from "../assets/teach/IMG_5990.jpg";
-import teachImage8 from "../assets/teach/IMG_5985.jpg";
-import teachImage9 from "../assets/teach/IMG_5980.jpg";
-import teachImage10 from "../assets/teach/IMG_5974.jpg";
-import teachImage11 from "../assets/teach/IMG_5972.jpg";
-import teachImage12 from "../assets/teach/IMG_5967.jpg";
-import teachImage13 from "../assets/teach/IMG_5962.jpg";
-import teachImage14 from "../assets/teach/IMG_5957.jpg";
+import teachImage1 from "../assets/teach/IMG_6023.JPG";
+import teachImage2 from "../assets/teach/IMG_6018.JPG";
+import teachImage3 from "../assets/teach/IMG_6017.JPG";
+import teachImage4 from "../assets/teach/IMG_6002.JPG";
+import teachImage5 from "../assets/teach/IMG_6000.JPG";
+import teachImage6 from "../assets/teach/IMG_5997.JPG";
+import teachImage7 from "../assets/teach/IMG_5990.JPG";
+import teachImage8 from "../assets/teach/IMG_5985.JPG";
+import teachImage9 from "../assets/teach/IMG_5980.JPG";
+import teachImage10 from "../assets/teach/IMG_5974.JPG";
+import teachImage11 from "../assets/teach/IMG_5972.JPG";
+import teachImage12 from "../assets/teach/IMG_5967.JPG";
+import teachImage13 from "../assets/teach/IMG_5962.JPG";
+import teachImage14 from "../assets/teach/IMG_5957.JPG";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
