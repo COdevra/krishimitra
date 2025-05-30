@@ -1,7 +1,7 @@
 import React from 'react';
 import { Play, X } from 'lucide-react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import thumbnailImage from "../assets/teach/IMG_6023.jpg"; // Using one of the existing images as thumbnail
+import thumbnailImage from "../assets/teach/IMG_6023.JPG"; // Using one of the existing images as thumbnail
 
 const VideoSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
