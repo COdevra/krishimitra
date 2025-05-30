@@ -26,35 +26,35 @@ const TeamSection: React.FC = () => {
       name: "Puja Khatri",
       role: "Co-Founder & Chief Executive Officer (CEO)",
       image: teamPageImage3,
-      bio: "Puja is a current undergraduate at Soka University of America. Known for her kind and easygoing personality, Puja ensures the overall operations run smoothly and resources are managed efficiently. She is passionate about sustainable development and leads with empathy, clarity, and purpose.",
+      bio: "Puja, a current undergraduate at Soka University of America, comes from a long line of farmers. Her mother encouraged her to choose a different path, but that path led her right back to agriculture, with a new purpose. As CEO of KrishiMitra, Puja is reimagining what farming can be: dignified, secure, and future-ready. She leads with vision rooted in experience, ensuring that farming is no longer seen as a last resort, but a proud and promising profession.",
     },
     
-    
-    {
-      name: "Laxman Bista",
-      role: "Chief Financial Officer (CFO)",
-      image: teamPageImage2,
-      bio: "Laxman is a Dartmouth graduate and the strategic force behind KrishiMitra’s growth. Beyond managing finances, he serves as the guiding light behind every major step and success of the project. Laxman’s visionary mindset and dependable leadership make him an integral part of our mission.",
-    },
-
     {
       name: "Aakriti Khapung Limbu",
       role: "Co-Founder & Chief Marketing Officer (CMO)",
       image: teamPageImage,
-      bio: "Aakriti is a current undergraduate at Soka University of America. She is creative, friendly, and full of energy. Aakriti leads all marketing and outreach efforts, helping more people connect with KrishiMitra’s mission. Her strong communication skills and leadership make her a key part of the team.",
+      bio: "Aakriti, a current undergraduate at Soka University of America, brings heart and strategy together in her role as CMO. Hailing from Nepal, she's passionate about empowering marginalized communities and making sure no one is left behind. Through storytelling, outreach, and community-driven campaigns, Aakriti is building a brand that speaks to the people, and for the people driving both awareness and impact.",
     },
+
   
     {
       name: "Devaki Rawal",
       role: "Web Developer and Research Analyst",
       image: teamPageImage4,
-      bio: "Devaki is a high school graduate who believes in using technology to make a difference. She has visited villages, collected data, and talked to farmers to understand their needs. Devaki connects technology with farming and helps farmers build a digital presence to improve their livelihoods.",
+      bio: "Devaki is a high school graduate who believes in the power of technology to create real-world impact. With a passion for grassroots research, she has visited villages, gathered data, and listened closely to farmers' stories. As Web Developer and Research Analyst at KrishiMitra, Devaki bridges the gap between tech and agriculture, helping farmers build a digital presence and unlock new opportunities for growth and visibility.",
     },
+    {
+      name: "Laxman Bista",
+      role: "Chief Financial Officer (CFO)",
+      image: teamPageImage2,
+      bio: "Laxman, a Dartmouth graduate, understands the true cost of farming because he's lived it. Coming from a farming background in landlocked Nepal, he knows the urgency of addressing food insecurity. As CFO of KrishiMitra, he ensures that every financial decision supports sustainability, dignity, and long-term value for farmers. His leadership is grounded in numbers and in empathy.",
+    },
+
     {
       name: "Manish Acharya",
       role: "Chief Technological Officer (CTO)",
       image: teamPageImage5,
-      bio: "Manish Acharya is a current undergraduate at Vanderbilt University and a passionate tech enthusiast. With a deep understanding of system architecture and product development, Manish oversees KrishiMitra’s technological foundation. He is dedicated to building scalable and innovative solutions that meet the real needs of farmers and bring lasting impact through technology.",
+      bio: "Manish Acharya is a current undergraduate at Vanderbilt and a passionate tech enthusiast. With a deep understanding of system architecture and product development, Manish oversees KrishiMitra's technological foundation. He is dedicated to building scalable and innovative solutions that meet the real needs of farmers and bring lasting impact through technology.",
     },
   
     {
@@ -87,27 +87,128 @@ const TeamSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {teamMembers.map((member) => (
-            <div key={member.name} className="group relative">
+        <div className="mt-12">
+          {/* First row - 2 people centered */}
+          <div className="flex justify-center gap-6 mb-6">
+            <div className="w-full max-w-sm group relative">
               <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <div className="h-72 overflow-hidden relative">
                   <img
-                    src={member.image}
-                    alt={member.name}
+                    src={teamMembers[0].image}
+                    alt={teamMembers[0].name}
                     className="w-full h-full object-contain object-center transform transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white text-sm px-4 text-center">{member.bio}</span>
+                    <span className="text-white text-sm px-4 text-center">{teamMembers[0].bio}</span>
                   </div>
                 </div>
                 <CardContent className="p-5 bg-[#196F3D]/5">
-                  <h3 className="text-lg font-medium text-neutral-900">{member.name}</h3>
-                  <p className="mt-2 text-sm text-neutral-700">{member.role}</p>
+                  <h3 className="text-lg font-medium text-neutral-900">{teamMembers[0].name}</h3>
+                  <p className="mt-2 text-sm text-neutral-700">{teamMembers[0].role}</p>
                 </CardContent>
               </Card>
             </div>
-          ))}
+            <div className="w-full max-w-sm group relative">
+              <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div className="h-72 overflow-hidden relative">
+                  <img
+                    src={teamMembers[1].image}
+                    alt={teamMembers[1].name}
+                    className="w-full h-full object-contain object-center transform transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white text-sm px-4 text-center">{teamMembers[1].bio}</span>
+                  </div>
+                </div>
+                <CardContent className="p-5 bg-[#196F3D]/5">
+                  <h3 className="text-lg font-medium text-neutral-900">{teamMembers[1].name}</h3>
+                  <p className="mt-2 text-sm text-neutral-700">{teamMembers[1].role}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Second row - Devaki, Laxman, Manish */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="group relative">
+              <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div className="h-72 overflow-hidden relative">
+                  <img
+                    src={teamMembers[2].image}
+                    alt={teamMembers[2].name}
+                    className="w-full h-full object-contain object-center transform transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white text-sm px-4 text-center">{teamMembers[2].bio}</span>
+                  </div>
+                </div>
+                <CardContent className="p-5 bg-[#196F3D]/5">
+                  <h3 className="text-lg font-medium text-neutral-900">{teamMembers[2].name}</h3>
+                  <p className="mt-2 text-sm text-neutral-700">{teamMembers[2].role}</p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="group relative">
+              <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div className="h-72 overflow-hidden relative">
+                  <img
+                    src={teamMembers[3].image}
+                    alt={teamMembers[3].name}
+                    className="w-full h-full object-contain object-center transform transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white text-sm px-4 text-center">{teamMembers[3].bio}</span>
+                  </div>
+                </div>
+                <CardContent className="p-5 bg-[#196F3D]/5">
+                  <h3 className="text-lg font-medium text-neutral-900">{teamMembers[3].name}</h3>
+                  <p className="mt-2 text-sm text-neutral-700">{teamMembers[3].role}</p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="group relative">
+              <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div className="h-72 overflow-hidden relative">
+                  <img
+                    src={teamMembers[4].image}
+                    alt={teamMembers[4].name}
+                    className="w-full h-full object-contain object-center transform transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white text-sm px-4 text-center">{teamMembers[4].bio}</span>
+                  </div>
+                </div>
+                <CardContent className="p-5 bg-[#196F3D]/5">
+                  <h3 className="text-lg font-medium text-neutral-900">{teamMembers[4].name}</h3>
+                  <p className="mt-2 text-sm text-neutral-700">{teamMembers[4].role}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Third row - All advisors */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {teamMembers.slice(5).map((member) => (
+              <div key={member.name} className="group relative">
+                <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                  <div className="h-72 overflow-hidden relative">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-contain object-center transform transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-white text-sm px-4 text-center">{member.bio}</span>
+                    </div>
+                  </div>
+                  <CardContent className="p-5 bg-[#196F3D]/5">
+                    <h3 className="text-lg font-medium text-neutral-900">{member.name}</h3>
+                    <p className="mt-2 text-sm text-neutral-700">{member.role}</p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

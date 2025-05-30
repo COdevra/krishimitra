@@ -20,21 +20,13 @@ const FeaturesSection: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
   
   const features: Feature[] = [
+    
     {
-      title: "AI-powered digital platform",
-      description: "Our machine learning algorithms analyze multiple data sources to provide personalized recommendations for each farmer's unique situation.",
-      icon: <Cpu className="h-6 w-6 text-white" />,
-    },
-    {
-      title: "Personalized crop advisory",
+      title: "AI driven personalized insights",
       description: "Get tailored advice on crop selection, planting methods, pest management, and fertilization based on your specific soil, climate, and resources.",
       icon: <Sprout className="h-6 w-6 text-white" />,
     },
-    {
-      title: "Optimal harvest times",
-      description: "Receive notifications about the best time to harvest your crops based on weather forecasts, market demand, and crop maturity indicators.",
-      icon: <Clock className="h-6 w-6 text-white" />,
-    },
+    
     {
       title: "Market price trends",
       description: "Stay informed about current and forecasted market prices for your crops to make better decisions about when and where to sell.",
@@ -49,6 +41,31 @@ const FeaturesSection: React.FC = () => {
       title: "Customized farming tips",
       description: "Learn modern, sustainable farming techniques that are specifically adapted for small-scale agriculture in your region to improve productivity.",
       icon: <GraduationCap className="h-6 w-6 text-white" />,
+    },
+    {
+      title: "Disease and Pest Detection",
+      description: "Utilize advanced algorithms for early detection and identification of common crop diseases and pests.",
+      icon: <Sprout className="h-6 w-6 text-white" />,
+    },
+    {
+      title: "Digital Marketplace Access",
+      description: "Connect directly with buyers and access a digital marketplace to sell your produce at competitive prices.",
+      icon: <TrendingUp className="h-6 w-6 text-white" />,
+    },
+    {
+      title: "Financial Literacy Trainings",
+      description: "Access training modules to improve financial management skills, including budgeting, credit, and investment.",
+      icon: <GraduationCap className="h-6 w-6 text-white" />,
+    },
+    {
+      title: "Soil Health Testing",
+      description: "Get insights into your soil's health through testing and receive recommendations for improving fertility and structure.",
+      icon: <Sprout className="h-6 w-6 text-white" />,
+    },
+    {
+      title: "Optimal harvest times",
+      description: "Receive notifications about the best time to harvest your crops based on weather forecasts, market demand, and crop maturity indicators.",
+      icon: <Clock className="h-6 w-6 text-white" />,
     },
   ];
 
@@ -86,12 +103,6 @@ const FeaturesSection: React.FC = () => {
                   <p className="mt-2 text-neutral-700 flex-grow">
                     {feature.description}
                   </p>
-                  <div className="mt-4 text-[#196F3D] font-medium flex items-center cursor-pointer group/learnmore">
-                    <span className="relative after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#196F3D] after:scale-x-0 group-hover/learnmore:after:scale-x-100 after:transition-transform after:duration-300">
-                      Learn more
-                    </span>
-                    <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover/learnmore:translate-x-1" />
-                  </div>
                 </CardContent>
               </Card>
             </div>

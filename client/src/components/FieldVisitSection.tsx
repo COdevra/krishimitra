@@ -1,34 +1,34 @@
 import React, { useState } from "react";
 
 // Import all images from Survey folder
-import surveyImage1 from "../assets/Survey/IMG_5927.JPG";
-import surveyImage2 from "../assets/Survey/IMG_5922.JPG";
-import surveyImage3 from "../assets/Survey/IMG_5906.JPG";
-import surveyImage4 from "../assets/Survey/IMG_5897.JPG";
-import surveyImage5 from "../assets/Survey/IMG_5892.JPG";
-import surveyImage6 from "../assets/Survey/IMG_5890.JPG";
-import surveyImage7 from "../assets/Survey/IMG_5865.JPG";
-import surveyImage8 from "../assets/Survey/IMG_5860.JPG";
-import surveyImage9 from "../assets/Survey/IMG_5846.JPG";
-import surveyImage10 from "../assets/Survey/IMG_5802.JPG";
-import surveyImage11 from "../assets/Survey/IMG_5798.JPG";
-import surveyImage12 from "../assets/Survey/IMG_5781.JPG";
+import surveyImage1 from "../assets/Survey/IMG_5927.jpg";
+import surveyImage2 from "../assets/Survey/IMG_5922.jpg";
+import surveyImage3 from "../assets/Survey/IMG_5906.jpg";
+import surveyImage4 from "../assets/Survey/IMG_5897.jpg";
+import surveyImage5 from "../assets/Survey/IMG_5892.jpg";
+import surveyImage6 from "../assets/Survey/IMG_5890.jpg";
+import surveyImage7 from "../assets/Survey/IMG_5865.jpg";
+import surveyImage8 from "../assets/Survey/IMG_5860.jpg";
+import surveyImage9 from "../assets/Survey/IMG_5846.jpg";
+import surveyImage10 from "../assets/Survey/IMG_5802.jpg";
+import surveyImage11 from "../assets/Survey/IMG_5798.jpg";
+import surveyImage12 from "../assets/Survey/IMG_5781.jpg";
 
 // Import all images from teach folder
-import teachImage1 from "../assets/teach/IMG_6023.JPG";
-import teachImage2 from "../assets/teach/IMG_6018.JPG";
-import teachImage3 from "../assets/teach/IMG_6017.JPG";
-import teachImage4 from "../assets/teach/IMG_6002.JPG";
-import teachImage5 from "../assets/teach/IMG_6000.JPG";
-import teachImage6 from "../assets/teach/IMG_5997.JPG";
-import teachImage7 from "../assets/teach/IMG_5990.JPG";
-import teachImage8 from "../assets/teach/IMG_5985.JPG";
-import teachImage9 from "../assets/teach/IMG_5980.JPG";
-import teachImage10 from "../assets/teach/IMG_5974.JPG";
-import teachImage11 from "../assets/teach/IMG_5972.JPG";
-import teachImage12 from "../assets/teach/IMG_5967.JPG";
-import teachImage13 from "../assets/teach/IMG_5962.JPG";
-import teachImage14 from "../assets/teach/IMG_5957.JPG";
+import teachImage1 from "../assets/teach/IMG_6023.jpg";
+import teachImage2 from "../assets/teach/IMG_6018.jpg";
+import teachImage3 from "../assets/teach/IMG_6017.jpg";
+import teachImage4 from "../assets/teach/IMG_6002.jpg";
+import teachImage5 from "../assets/teach/IMG_6000.jpg";
+import teachImage6 from "../assets/teach/IMG_5997.jpg";
+import teachImage7 from "../assets/teach/IMG_5990.jpg";
+import teachImage8 from "../assets/teach/IMG_5985.jpg";
+import teachImage9 from "../assets/teach/IMG_5980.jpg";
+import teachImage10 from "../assets/teach/IMG_5974.jpg";
+import teachImage11 from "../assets/teach/IMG_5972.jpg";
+import teachImage12 from "../assets/teach/IMG_5967.jpg";
+import teachImage13 from "../assets/teach/IMG_5962.jpg";
+import teachImage14 from "../assets/teach/IMG_5957.jpg";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -97,10 +97,10 @@ const FieldVisitSection: React.FC = () => {
           </Button>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-             {getVisibleImages().map((image, index) => (
+            {getVisibleImages().map((image, index) => (
               <div 
                 key={`${currentIndex + index}`}
-                className="relative group aspect-w-1 aspect-h-1 cursor-pointer"
+                className="relative group cursor-pointer h-[250px]"
                 onClick={() => openModal(image)}
               >
                 <img
@@ -108,10 +108,9 @@ const FieldVisitSection: React.FC = () => {
                   alt={`Field visit photo ${currentIndex + index + 1}`}
                   className="object-cover w-full h-full rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105"
                 />
-                 {/* Optional: Add an overlay or caption on hover */}
-                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                   <p className="text-white text-center text-sm px-4">Click to view larger</p>
-                 </div>
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                  <p className="text-white text-center text-sm px-4">Click to view larger</p>
+                </div>
               </div>
             ))}
           </div>
@@ -128,13 +127,21 @@ const FieldVisitSection: React.FC = () => {
       </div>
 
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="sm:max-w-[800px] w-full h-auto aspect-w-16 aspect-h-9 p-0 overflow-hidden">
+        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 overflow-hidden">
           {selectedImage && (
-            <img 
-              src={selectedImage} 
-              alt="Larger view" 
-              className="object-contain w-full h-full"
-            />
+            <div className="relative w-full h-full">
+              <img 
+                src={selectedImage} 
+                alt="Larger view" 
+                className="w-full h-full object-contain"
+              />
+              <DialogClose className="absolute top-2 right-2 bg-white rounded-full p-2 shadow-lg hover:bg-neutral-100">
+                <span className="sr-only">Close</span>
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </DialogClose>
+            </div>
           )}
         </DialogContent>
       </Dialog>

@@ -5,7 +5,10 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import FieldVisitSection from '@/components/FieldVisitSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import VideoSection from '@/components/VideoSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import OutreachSection from '@/components/OutreachSection';
+// import AppReferralSection from '@/components/AppReferralSection';
 import Footer from '@/components/Footer';
 
 const Home: React.FC = () => {
@@ -28,9 +31,12 @@ const Home: React.FC = () => {
         <main className="flex-grow">
           <HeroSection />
           <AboutSection />
-          <FieldVisitSection />
           <FeaturesSection />
+          <FieldVisitSection />
+          <VideoSection />
+          <OutreachSection />
           <TestimonialsSection />
+          {/* <AppReferralSection /> */}
         </main>
         <Footer />
       </div>
